@@ -1,0 +1,3151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://www.gueei.com/android-binding/"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/yhjbxx_bgimage"
+    android:orientation="vertical" >
+
+    <!-- 安检主界面 --> 
+
+    <LinearLayout
+        android:id="@+id/MainContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal" >
+
+        <!-- 导航菜单 -->
+
+        <LinearLayout
+            android:id="@+id/LeftMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="6dp"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imageViewBasic"
+                android:layout_width="179dp"
+                android:layout_height="wrap_content"
+                binding:onClick="BasicImgClicked"
+                binding:source="basicImgId" />
+
+            <ImageView
+                android:id="@+id/imageViewMeter"
+                android:layout_width="179dp"
+                android:layout_height="wrap_content"
+                binding:onClick="MeterImgClicked"
+                binding:source="meterImgId" />
+
+            <ImageView
+                android:id="@+id/imageViewPlum"
+                android:layout_width="179dp"
+                android:layout_height="wrap_content"
+                binding:onClick="PlumImgClicked"
+                binding:source="plumImgId" />
+
+            <ImageView
+                android:id="@+id/imageViewCooker"
+                android:layout_width="179dp"
+                android:layout_height="wrap_content"
+                binding:onClick="CookerImgClicked"
+                binding:source="cookerImgId" />
+
+            <ImageView
+                android:id="@+id/imageViewFurnace"
+                android:layout_width="179dp"
+                android:layout_height="wrap_content"
+                binding:onClick="FurnaceImgClicked"
+                binding:source="furnaceImgId" />
+
+            <ImageView
+                android:id="@+id/imageViewPrecaution"
+                android:layout_width="179dp"
+                android:layout_height="wrap_content"
+                binding:onClick="PrecautionImgClicked"
+                binding:source="precautionImgId" />
+
+            <ImageView
+                android:id="@+id/imageViewSuggestion"
+                android:layout_width="179dp"
+                android:layout_height="wrap_content"
+                binding:onClick="SuggestionImgClicked"
+                binding:source="suggestionImgId" />
+
+            <ImageView
+                android:id="@+id/imageViewFeedback"
+                android:layout_width="179dp"
+                android:layout_height="wrap_content"
+                binding:onClick="FeedbackImgClicked"
+                binding:source="feedbackImgId" />
+        </LinearLayout>
+
+        <!-- 主显示区 -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <!-- BasePane -->
+
+            <LinearLayout
+                android:id="@+id/basicPane"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blue"
+                    android:text="用户基本信息"
+                    android:textColor="@color/white"
+                    android:textSize="26sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="入户"
+                        android:textColor="@color/black"
+                        android:textSize="23sp" />
+
+                    <Switch
+                        android:id="@+id/f_ruhu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textOff="否"
+                        android:textOn="是"
+                        android:textSize="26sp"
+                        binding:checked="f_ruhu" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="拒检"
+                        android:textColor="@color/black"
+                        android:textSize="23sp" />
+
+                    <Switch
+                        android:id="@+id/f_jujian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textOff="否"
+                        android:textOn="是"
+                        android:textSize="26sp"
+                        binding:checked="f_jujian" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="已发到访不遇卡"
+                        android:textColor="@color/black"
+                        android:textSize="23sp" />
+
+                    <Switch
+                        android:id="@+id/hasNotified"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textOff="否"
+                        android:textOn="是"
+                        android:textSize="26sp"
+                        binding:checked="hasNotified" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="日期"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:text="f_anjianriqi" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="到达时间"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:text="ArrivalTime" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="离开时间"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <com.aofeng.utils.MyDigitalClock
+                        android:id="@+id/digitalClock"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="安检类型"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/f_checktype"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="80dp"
+                        android:background="@color/white"
+                        binding:itemSource="f_checktype"
+                        binding:itemTemplate="@layout/simple_spinner_dropdown_item"
+                        binding:spinnerTemplate="@layout/simple_spinner_item" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="卡号"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:inputType="text"
+                        android:maxLength="11"
+                        android:singleLine="true"
+                        android:textSize="20sp"
+                        binding:text="f_kahao" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="刷新"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:onClick="SearchByICCardNo" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="姓名"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:text="f_consumername" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="电话"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:text="f_consumerphone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="6dp"
+                        android:text="市"
+                        android:visibility="gone"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        binding:text="city" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="6dp"
+                        android:text="区"
+                        android:visibility="gone"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        binding:text="f_area" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:text="街道"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:text="ROAD" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="6dp"
+                        android:text="小区"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:text="UNIT_NAME" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="6dp"
+                        android:text="楼号"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:text="CUS_DOM" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="6dp"
+                        android:text="单元号"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:text="CUS_DY" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:text="楼层"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:text="CUS_FLOOR" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="6dp"
+                        android:text="房号"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:text="CUS_ROOM" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="档案地址:"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/Address"
+                        android:layout_width="700dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:text="f_address" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:text="街道"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/ROAD2"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:text="ROAD2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="6dp"
+                        android:text="小区"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/UNIT_NAME2"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:text="UNIT_NAME2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="6dp"
+                        android:text="楼号"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/oldDom"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:text="CUS_DOM2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="6dp"
+                        android:text="单元号"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/oldDY"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:text="CUS_DY2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:textSize="20sp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:text="楼层"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/CUS_FLOOR2"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:text="CUS_FLOOR2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="6dp"
+                        android:text="房号"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/CUS_ROOM2"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:text="CUS_ROOM2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="常驻人口"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:text="f_renkou" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="租住"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/f_zuzhu"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="80dp"
+                        android:background="@color/white"
+                        binding:itemSource="f_zuzhu"
+                        binding:itemTemplate="@layout/simple_spinner_dropdown_item"
+                        binding:spinnerTemplate="@layout/simple_spinner_item" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="小区性质"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/f_property"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/white"
+                        binding:itemSource="f_property"
+                        binding:itemTemplate="@layout/simple_spinner_dropdown_item"
+                        binding:spinnerTemplate="@layout/simple_spinner_item" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="网格编码"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/REGION_NAME"
+                        android:layout_width="100dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/white"
+                        binding:itemSource="REGION_NAME"
+                        android:visibility="gone"
+                        binding:itemTemplate="@layout/simple_spinner_dropdown_item"
+                        binding:spinnerTemplate="@layout/simple_spinner_item" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal"
+                    android:textSize="20sp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="是否重点用户"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/f_iszhongdian"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/white"
+                        binding:itemSource="f_iszhongdian"
+                        binding:itemTemplate="@layout/simple_spinner_dropdown_item"
+                        binding:spinnerTemplate="@layout/simple_spinner_item" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="供暖方式"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/f_gongnuan"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/white"
+                        binding:itemSource="f_gongnuan"
+                        binding:itemTemplate="@layout/simple_spinner_dropdown_item"
+                        binding:spinnerTemplate="@layout/simple_spinner_item" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- MeterPane -->
+
+            <LinearLayout
+                android:id="@+id/meterPane"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:textSize="20sp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blue"
+                    android:orientation="horizontal"
+                    android:textSize="20sp" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="报警器"
+                        android:textColor="@color/white"
+                        android:textSize="26sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="有否"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/f_baojingqi"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="40dp"
+                        android:background="@color/white"
+                        binding:itemSource="f_baojingqi"
+                        binding:itemTemplate="@layout/simple_spinner_dropdown_item"
+                        binding:spinnerTemplate="@layout/simple_spinner_item" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="厂家"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/f_baojingqichang"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/white"
+                        binding:itemSource="f_baojingqichang"
+                        binding:itemTemplate="@layout/simple_spinner_dropdown_item"
+                        binding:spinnerTemplate="@layout/simple_spinner_item" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="报警器安装时间"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/f_alarm_installation_time"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:editable="false"
+                        android:maxLength="10"
+                        android:textColor="@color/black"
+                        binding:text="f_alarm_installation_time" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="报警器到期时间"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/f_alarm_expire_time"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:editable="false"
+                        android:maxLength="10"
+                        android:enabled="false"
+                        android:textColor="@color/black"
+                        binding:text="f_alarm_expire_time" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blue"
+                    android:orientation="horizontal"
+                    android:textSize="20sp" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="燃气表"
+                        android:textColor="@color/white"
+                        android:textSize="26sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="卡号"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:inputType="text"
+                        android:maxLength="11"
+                        android:singleLine="true"
+                        android:textSize="20sp"
+                        binding:text="f_kahao" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:text="表编号"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/f_biaohao"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        binding:text="f_biaohao" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="表型"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/f_meter_type"
+                        android:layout_width="100dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="40dp"
+                        android:background="@color/white"
+                        binding:itemSource="f_meter_type"
+                        binding:itemTemplate="@layout/simple_spinner_dropdown_item"
+                        binding:spinnerTemplate="@layout/simple_spinner_item" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="左右表"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/f_rqbiaoxing"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:background="@color/white"
+                        binding:itemSource="f_rqbiaoxing"
+                        binding:itemTemplate="@layout/simple_spinner_dropdown_item"
+                        binding:spinnerTemplate="@layout/simple_spinner_item" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="生产时间"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/f_meter_manufacture_date"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:editable="false"
+                        android:maxLength="10"
+                        android:textColor="@color/black"
+                        binding:text="f_meter_manufacture_date" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="基表厂家"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/f_biaochang"
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/white"
+                        binding:itemSource="f_biaochang"
+                        binding:itemTemplate="@layout/simple_spinner_dropdown_item"
+                        binding:spinnerTemplate="@layout/simple_spinner_item" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="基表读数"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/f_jbdushu"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="9"
+                        android:textColor="@color/black"
+                        binding:text="f_jbdushu" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="IC卡表厂家"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/f_kachangjia"
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/white"
+                        binding:itemSource="f_kachangjia"
+                        binding:itemTemplate="@layout/simple_spinner_dropdown_item"
+                        binding:spinnerTemplate="@layout/simple_spinner_item" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="IC卡表类型"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/f_iccard_type"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/white"
+                        binding:itemSource="f_iccard_type"
+                        binding:itemTemplate="@layout/simple_spinner_dropdown_item"
+                        binding:spinnerTemplate="@layout/simple_spinner_item" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="剩余气量"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/f_shengyu"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="9"
+                        android:textColor="@color/black"
+                        binding:text="f_shengyu" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="剩余金额"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/f_balance"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="9"
+                        android:textColor="@color/black"
+                        binding:text="f_balance" />
+
+                    <CheckBox
+                        android:id="@+id/f_new_meter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="换表"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_newmeter" />
+                        
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="总购气量"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/f_buygas"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="9"
+                        android:textColor="@color/black"
+                        binding:text="f_buygas" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="..."
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:onClick="ShowPurchaseHistory" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:text="故障类型"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/f_sibiao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="死表"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_sibiao" />
+
+                    <CheckBox
+                        android:id="@+id/f_changtong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="常通"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_changtong" />
+
+                    <CheckBox
+                        android:id="@+id/f_fanzhuang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="反装"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_fanzhuang" />
+
+                    <CheckBox
+                        android:id="@+id/f_qblouqi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="漏气"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_qblouqi" />
+
+                    <CheckBox
+                        android:id="@+id/f_reading_mismatch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="气量不符"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_reading_mismatch" />
+
+                    <CheckBox
+                        android:id="@+id/f_qbqita"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="其他"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_qbqita" />
+
+                    <EditText
+                        android:id="@+id/f_qibiao"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        binding:text="f_qibiao" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:text="表封"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/f_meter_cover"
+                        android:layout_width="100dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/white"
+                        binding:itemSource="f_meter_cover"
+                        binding:itemTemplate="@layout/simple_spinner_dropdown_item"
+                        binding:spinnerTemplate="@layout/simple_spinner_item" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="隐患类型"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/f_meter_wrapped"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="包裹"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_meter_wrapped" />
+
+                    <CheckBox
+                        android:id="@+id/f_meter_hanger"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="挂物"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_meter_hanger" />
+
+                    <CheckBox
+                        android:id="@+id/f_meter_nearfire"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="与电源或火源过近"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_meter_nearfire" />
+
+                    <CheckBox
+                        android:id="@+id/f_meter_unfavorable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="不便维修"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_meter_unfavorable" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- PlumPane -->
+
+            <LinearLayout
+                android:id="@+id/plumPane"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blue"
+                    android:orientation="horizontal"
+                    android:textSize="20sp" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="立管"
+                        android:textColor="@color/white"
+                        android:textSize="26sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:text="立管类型"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/f_plumbing_type"
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/white"
+                        binding:itemSource="f_plumbing_type"
+                        binding:itemTemplate="@layout/simple_spinner_dropdown_item"
+                        binding:spinnerTemplate="@layout/simple_spinner_item" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="6dp"
+                        android:text="管件详情"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/f_plumbing_valve"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="立管阀"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_plumbing_valve" />
+
+                    <CheckBox
+                        android:id="@+id/f_plumbing_slipknot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="活结"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_plumbing_slipknot" />
+
+                    <CheckBox
+                        android:id="@+id/f_plumbing_scaleknot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="伸缩结"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_plumbing_scaleknot" />
+
+                    <CheckBox
+                        android:id="@+id/f_plumbing_diameter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="变径"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_plumbing_diameter" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:text="隐患类型"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/f_lgzhengchang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="正常"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_lgzhengchang" />
+
+                    <CheckBox
+                        android:id="@+id/f_lgfushi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="腐蚀"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_lgfushi" />
+
+                    <CheckBox
+                        android:id="@+id/f_lgsigai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="私改"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_lgsigai" />
+
+                    <CheckBox
+                        android:id="@+id/f_lglouqi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="漏气"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_lglouqi" />
+
+                    <CheckBox
+                        android:id="@+id/f_lgbaoguo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="包裹"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_lgbaoguo" />
+
+                    <CheckBox
+                        android:id="@+id/f_lgguawu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="挂物"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_lgguawu" />
+
+                    <CheckBox
+                        android:id="@+id/f_lghuoyuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="与电源或火源过近"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_lghuoyuan" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textSize="20sp" >
+
+                    <CheckBox
+                        android:id="@+id/f_lgweiguding"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="未固定"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_lgweiguding" />
+
+                    <CheckBox
+                        android:id="@+id/f_lgchuanyue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="穿越禁止区域"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_lgchuanyue" />
+
+                    <CheckBox
+                        android:id="@+id/f_lgbubianweixiu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="不便维修"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_lgbubianweixiu" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:text="漏气位置"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/f_plumbing_leakage_valve"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="阀门"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_plumbing_leakage_valve" />
+
+                    <CheckBox
+                        android:id="@+id/f_plumbing_leakage_scaleknot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="伸缩结"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_plumbing_leakage_scaleknot" />
+
+                    <CheckBox
+                        android:id="@+id/f_plumbing_leakage_slipknot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="活结"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_plumbing_leakage_slipknot" />
+
+                    <CheckBox
+                        android:id="@+id/f_plumbing_leakage_triple"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="三通"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_plumbing_leakage_triple" />
+
+                    <CheckBox
+                        android:id="@+id/f_plumbing_leakage_diameter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="变径"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_plumbing_leakage_diameter" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blue"
+                    android:orientation="horizontal"
+                    android:textSize="20sp" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="阀门"
+                        android:textColor="@color/white"
+                        android:textSize="26sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:textSize="20sp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="6dp"
+                        android:text="表前阀类型"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/f_metervalve_type"
+                        android:layout_width="120dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/white"
+                        binding:itemSource="f_metervalve_type"
+                        binding:itemTemplate="@layout/simple_spinner_dropdown_item"
+                        binding:spinnerTemplate="@layout/simple_spinner_item" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="6dp"
+                        android:text="表前阀"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/f_biaoqianfa"
+                        android:layout_width="120dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/white"
+                        binding:itemSource="f_biaoqianfa"
+                        binding:itemTemplate="@layout/simple_spinner_dropdown_item"
+                        binding:spinnerTemplate="@layout/simple_spinner_item" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:text="灶前阀"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/f_zaoqianfa"
+                        android:layout_width="120dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/white"
+                        binding:itemSource="f_zaoqianfa"
+                        binding:itemTemplate="@layout/simple_spinner_dropdown_item"
+                        binding:spinnerTemplate="@layout/simple_spinner_item" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:text="自闭阀"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/f_zibifa"
+                        android:layout_width="120dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/white"
+                        binding:itemSource="f_zibifa"
+                        binding:itemTemplate="@layout/simple_spinner_dropdown_item"
+                        binding:spinnerTemplate="@layout/simple_spinner_item" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blue"
+                    android:orientation="horizontal"
+                    android:textSize="20sp" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="表后管"
+                        android:textColor="@color/white"
+                        android:textSize="26sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:text="隐患类型"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/f_bhgzhengchang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="正常"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_bhgzhengchang" />
+
+                    <CheckBox
+                        android:id="@+id/f_bhgbaoguan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="包裹"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_bhgbaoguan" />
+
+                    <CheckBox
+                        android:id="@+id/f_bhgguawu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="挂物"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_bhgguawu" />
+
+                    <CheckBox
+                        android:id="@+id/f_bhglouqi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="漏气"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_bhglouqi" />
+
+                    <CheckBox
+                        android:id="@+id/f_bhgjinzhiquyu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="穿越禁止区域"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_bhgjinzhiquyu" />
+
+                    <CheckBox
+                        android:id="@+id/f_bhgdianyuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="与电源或火源过近"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_bhgdianyuan" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:orientation="horizontal" >
+
+                    <CheckBox
+                        android:id="@+id/f_bhggaiguan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="私改"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_bhggaiguan" />
+
+                    <CheckBox
+                        android:id="@+id/f_bhgrst"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="软三通"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_bhgrst" />
+
+                    <CheckBox
+                        android:id="@+id/f_bhgfushi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="腐蚀"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_bhgfushi" />
+
+                    <CheckBox
+                        android:id="@+id/f_bhgbubianweixiu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="不便维修"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_bhgbubianweixiu" />
+
+                    <CheckBox
+                        android:id="@+id/f_bhgwxd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="未固定"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_bhgwxd" />
+
+                    <CheckBox
+                        android:id="@+id/f_bhgqita"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="其他"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_bhgqita" />
+
+                    <EditText
+                        android:id="@+id/f_bhgbeizhu"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        binding:text="f_bhgbeizhu" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blue"
+                    android:orientation="horizontal"
+                    android:textSize="20sp" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="胶皮管"
+                        android:textColor="@color/white"
+                        android:textSize="26sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:text="隐患类型"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/f_jpgzhengchang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="正常"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_jpgzhengchang" />
+
+                    <CheckBox
+                        android:id="@+id/f_jpglouqi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="漏气"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_jpglouqi" />
+
+                    <CheckBox
+                        android:id="@+id/f_jpglaohua"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="老化"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_jpglaohua" />
+
+                    <CheckBox
+                        android:id="@+id/f_jpgguochang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="过长"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_jpgguochang" />
+
+                    <CheckBox
+                        android:id="@+id/f_jpgwuguanjia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="无管夹"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_jpgwuguanjia" />
+
+                    <CheckBox
+                        android:id="@+id/f_jpgdiaoding"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="穿墙或吊顶"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_jpgdiaoding" />
+
+                    <CheckBox
+                        android:id="@+id/f_jpganmai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="暗埋"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_jpganmai" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- CookerPane -->
+
+            <LinearLayout
+                android:id="@+id/cookerPane"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@color/blue"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="灶具"
+                        android:textColor="@color/white"
+                        android:textSize="26sp" />
+
+                    <CheckBox
+                        android:id="@+id/f_zjshiyong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="未用"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        binding:checked="f_zjshiyong"
+                        binding:onCheckedChange="ZJShiYongCmd" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="品牌"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/f_zjpinpai"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLength="30"
+                        android:textColor="@color/black"
+                        binding:enabled="NOT(=id/f_zjshiyong.checked)"
+                        binding:text="f_zjpinpai" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="类型"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/f_zjleixing"
+                        android:layout_width="120dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/white"
+                        binding:enabled="NOT(=id/f_zjshiyong.checked)"
+                        binding:itemSource="f_zjleixing"
+                        binding:itemTemplate="@layout/simple_spinner_dropdown_item"
+                        binding:spinnerTemplate="@layout/simple_spinner_item" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="安装时间"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/f_cooker_installation_time"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:editable="false"
+                        android:maxLength="10"
+                        android:textColor="@color/black"
+                        binding:enabled="NOT(=id/f_zjshiyong.checked)"
+                        binding:text="f_cooker_installation_time" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="到期时间"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/f_cooker_expire_time"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:maxLength="10"
+                        android:textColor="@color/black"
+                        android:enabled="false"
+                        binding:text="f_cooker_expire_time" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="现状"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/f_zjxianzhuang"
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/white"
+                        binding:enabled="NOT(=id/f_zjshiyong.checked)"
+                        binding:itemSource="f_zjxianzhuang"
+                        binding:itemTemplate="@layout/simple_spinner_dropdown_item"
+                        binding:spinnerTemplate="@layout/simple_spinner_item" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:text="隐患类型"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/f_cooker_overdue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="超期使用"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_cooker_overdue"
+                        binding:enabled="NOT(=id/f_zjshiyong.checked)" />
+
+                    <CheckBox
+                        android:id="@+id/f_cooker_nofireprotection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="无熄火保护或熄火保护失效"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_cooker_nofireprotection"
+                        binding:enabled="NOT(=id/f_zjshiyong.checked)" />
+
+                    <CheckBox
+                        android:id="@+id/f_cooker_leakage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="漏气"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_cooker_leakage"
+                        binding:enabled="NOT(=id/f_zjshiyong.checked)" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="备注："
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/f_cooker_precaution_remark"
+                        android:layout_width="500dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        binding:enabled="NOT(=id/f_zjshiyong.checked)"
+                        binding:text="f_cooker_precaution_remark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@color/blue"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="热水器"
+                        android:textColor="@color/white"
+                        android:textSize="26sp" />
+
+                    <CheckBox
+                        android:id="@+id/f_rshqshiyong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="未用"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        binding:checked="f_rshqshiyong"
+                        binding:onCheckedChange="RSQShiYongCmd" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="品牌"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/f_rshqpinpai"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLength="30"
+                        android:textColor="@color/black"
+                        binding:enabled="NOT(=id/f_rshqshiyong.checked)"
+                        binding:text="f_rshqpinpai" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="功率"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/f_rshqxinghao"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:textColor="@color/black"
+                        binding:enabled="NOT(=id/f_rshqshiyong.checked)"
+                        binding:text="f_rshqxinghao" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="安装时间"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/f_heater_installation_time"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                         android:editable="false"
+                        android:maxLength="10"
+                        android:textColor="@color/black"
+                        binding:enabled="NOT(=id/f_rshqshiyong.checked)"
+                        binding:text="f_heater_installation_time" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="到期时间"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/f_heater_expire_time"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:maxLength="10"
+                        android:textColor="@color/black"
+                        android:enabled="false"
+                        binding:text="f_heater_expire_time" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="现状"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/f_rshqxianzhuang"
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/white"
+                        binding:enabled="NOT(=id/f_rshqshiyong.checked)"
+                        binding:itemSource="f_rshqxianzhuang"
+                        binding:itemTemplate="@layout/simple_spinner_dropdown_item"
+                        binding:spinnerTemplate="@layout/simple_spinner_item" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="安装位置"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/f_heater_place"
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/white"
+                        binding:enabled="NOT(=id/f_rshqshiyong.checked)"
+                        binding:itemSource="f_heater_place"
+                        binding:itemTemplate="@layout/simple_spinner_dropdown_item"
+                        binding:spinnerTemplate="@layout/simple_spinner_item" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:text="隐患类型"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/f_heater_overdue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="超期使用"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_heater_overdue"
+                        binding:enabled="NOT(=id/f_rshqshiyong.checked)" />
+
+                    <CheckBox
+                        android:id="@+id/f_heater_softconnector"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="软管连接"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_heater_softconnector"
+                        binding:enabled="NOT(=id/f_rshqshiyong.checked)" />
+
+                    <CheckBox
+                        android:id="@+id/f_heater_trapped"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="直排或烟道未排出室外"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_heater_trapped"
+                        binding:enabled="NOT(=id/f_rshqshiyong.checked)" />
+
+                    <CheckBox
+                        android:id="@+id/f_heater_leakage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="漏气"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_heater_leakage"
+                        binding:enabled="NOT(=id/f_rshqshiyong.checked)" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:text="漏气位置"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/f_heater_leakage_connetor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="接口"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_heater_leakage_connetor"
+                        binding:enabled="NOT(=id/f_rshqshiyong.checked)" />
+
+                    <CheckBox
+                        android:id="@+id/f_heater_leakage_valve"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="球阀"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_heater_leakage_valve"
+                        binding:enabled="NOT(=id/f_rshqshiyong.checked)" />
+
+                    <CheckBox
+                        android:id="@+id/f_heater_leakage_heater"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="机身"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_heater_leakage_heater"
+                        binding:enabled="NOT(=id/f_rshqshiyong.checked)" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="备注："
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/f_heater_precaution_remark"
+                        android:layout_width="500dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        binding:enabled="NOT(=id/f_rshqshiyong.checked)"
+                        binding:text="f_heater_precaution_remark" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/furnacePane"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:textSize="20sp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="top"
+                    android:background="@color/blue"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="壁挂锅炉"
+                        android:textColor="@color/white"
+                        android:textSize="26sp" />
+
+                    <CheckBox
+                        android:id="@+id/f_bglshiyong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="top"
+                        android:text="未用"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        binding:checked="f_bglshiyong"
+                        binding:onCheckedChange="BGLShiYongCmd" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="品牌"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/f_bglpinpai"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLength="30"
+                        android:textColor="@color/black"
+                        binding:enabled="NOT(=id/f_bglshiyong.checked)"
+                        binding:text="f_bglpinpai" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="安装时间"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/f_furnace_installation_time"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:editable="false"
+                        android:maxLength="10"
+                        android:textColor="@color/black"
+                        binding:enabled="NOT(=id/f_bglshiyong.checked)"
+                        binding:text="f_furnace_installation_time" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="到期时间"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/f_furnace_expire_time"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:maxLength="10"
+                        android:textColor="@color/black"
+                        android:enabled="false"
+                        binding:text="f_furnace_expire_time" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="现状"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/f_bglxianzhuang"
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/white"
+                        binding:enabled="NOT(=id/f_bglshiyong.checked)"
+                        binding:itemSource="f_bglxianzhuang"
+                        binding:itemTemplate="@layout/simple_spinner_dropdown_item"
+                        binding:spinnerTemplate="@layout/simple_spinner_item" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="位置"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/f_bglweizhi"
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/white"
+                        binding:enabled="NOT(=id/f_bglshiyong.checked)"
+                        binding:itemSource="f_bglweizhi"
+                        binding:itemTemplate="@layout/simple_spinner_dropdown_item"
+                        binding:spinnerTemplate="@layout/simple_spinner_item" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="功率"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/f_bglgonglv"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:textColor="@color/black"
+                        binding:enabled="NOT(=id/f_bglshiyong.checked)"
+                        binding:text="f_bglgonglv" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:text="隐患类型"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/f_furnace_overdue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="超期使用"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_furnace_overdue"
+                        binding:enabled="NOT(=id/f_bglshiyong.checked)" />
+
+                    <CheckBox
+                        android:id="@+id/f_furnace_softconnector"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="软管连接"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_furnace_softconnector"
+                        binding:enabled="NOT(=id/f_bglshiyong.checked)" />
+
+                    <CheckBox
+                        android:id="@+id/f_furnace_trapped"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="直排或烟道未排出室外"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_furnace_trapped"
+                        binding:enabled="NOT(=id/f_bglshiyong.checked)" />
+
+                    <CheckBox
+                        android:id="@+id/f_furnace_leakage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="漏气"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_furnace_leakage"
+                        binding:enabled="NOT(=id/f_bglshiyong.checked)" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:text="漏气位置"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/f_furnace_leakage_connetor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="接口"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_furnace_leakage_connetor"
+                        binding:enabled="NOT(=id/f_bglshiyong.checked)" />
+
+                    <CheckBox
+                        android:id="@+id/f_furnace_leakage_valve"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="球阀"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_furnace_leakage_valve"
+                        binding:enabled="NOT(=id/f_bglshiyong.checked)" />
+
+                    <CheckBox
+                        android:id="@+id/f_furnace_leakage_furnace"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="机身"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_furnace_leakage_furnace"
+                        binding:enabled="NOT(=id/f_bglshiyong.checked)" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="备注："
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/f_furnace_precaution_remark"
+                        android:layout_width="500dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        binding:enabled="NOT(=id/f_bglshiyong.checked)"
+                        binding:text="f_furnace_precaution_remark" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- PrecautionPane -->
+
+            <LinearLayout
+                android:id="@+id/precautionPane"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:text="其他隐患"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/f_precaution_kitchen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="开放式或密闭式厨房"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_precaution_kitchen" />
+
+                    <CheckBox
+                        android:id="@+id/f_precaution_multisource"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="多种火源"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        binding:checked="f_precaution_multisource" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="更改用途"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/f_precaution_otheruse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/white"
+                        binding:itemSource="f_precaution_otheruse"
+                        binding:itemTemplate="@layout/simple_spinner_dropdown_item"
+                        binding:spinnerTemplate="@layout/simple_spinner_item" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="整改意见单单号"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/f_renow_id"
+                        android:layout_width="500dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        binding:text="f_renow_id" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="备注："
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/f_zgbeizhu"
+                        android:layout_width="500dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        binding:text="f_zgbeizhu" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8px"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/image1"
+                            android:layout_width="150px"
+                            android:layout_height="105px"
+                            android:background="@drawable/nopic" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:id="@+id/shoot1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="拍照"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/clear1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="清除"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8px"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/image2"
+                            android:layout_width="150px"
+                            android:layout_height="105px"
+                            android:background="@drawable/nopic" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:id="@+id/shoot2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="拍照"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/clear2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="清除"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8px"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/image3"
+                            android:layout_width="150px"
+                            android:layout_height="105px"
+                            android:background="@drawable/nopic" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:id="@+id/shoot3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="拍照"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/clear3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="清除"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/image4"
+                            android:layout_width="150dp"
+                            android:layout_height="105dp"
+                            android:background="@drawable/nopic" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:id="@+id/shoot4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="拍照"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/clear4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="清除"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8px"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/image5"
+                            android:layout_width="150px"
+                            android:layout_height="105px"
+                            android:background="@drawable/nopic" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:id="@+id/shoot5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="拍照"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/clear5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="清除"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <CheckBox
+                        android:id="@+id/IsDispatchRepair"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5px"
+                        android:text="是否维修"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20px"
+                        android:text="部门:"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/DepartmentList"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/blue"
+                        binding:itemSource="DepartmentList"
+                        binding:itemTemplate="@layout/simple_spinner_dropdown_item"
+                        binding:spinnerTemplate="@layout/simple_spinner_item" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20px"
+                        android:text="维修人员:"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/RepairManList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/blue"
+                        binding:itemSource="RepairManList"
+                        binding:itemTemplate="@layout/simple_spinner_dropdown_item"
+                        binding:spinnerTemplate="@layout/simple_spinner_item" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/suggestionPane"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:textSize="20sp" >
+
+                    <LinearLayout
+                        android:id="@+id/ideaPad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:orientation="vertical" >
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+        <!-- FeedbackPane -->
+
+        <LinearLayout
+            android:id="@+id/feedbackPane"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue"
+                android:text="  客户意见反馈"
+                android:textColor="@color/white"
+                android:textSize="26sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="检查说明："
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="1.已对客户燃气设施进行了安全检查。"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="2.已对客户进行了安全 用气知识宣传，并发放宣传资料"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="3.已对客户 资料进行了登记。"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="4.已向违章及隐患客户下达了书面的隐患告知书、\n    并充分向用户告知了存在的隐患内容及注意事项，用户已获悉其中的内容。"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="客户签名:"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/signPad"
+                    android:layout_width="600dp"
+                    android:layout_height="283dp"
+                    android:background="@color/blue"
+                    binding:onClick="sign" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="签名"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    binding:onClick="sign" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请对我们做出评价:"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/FeebackSatisfied"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="满意"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/FeebackOK"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="基本满意"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/FeebackUnsatisfied"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="不满意"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/saveButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="150dp"
+                    android:text="保存"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    binding:onClick="saveInspectionRecord" />
+
+                <Button
+                    android:id="@+id/uploadButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="上传"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    binding:onClick="UploadInspectionRecord" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

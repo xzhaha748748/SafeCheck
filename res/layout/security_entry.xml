@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://www.gueei.com/android-binding/"
+    android:layout_width="fill_parent"
+    android:layout_height="50px"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    binding:onClick="ReadInspection" >
+
+    <TextView
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:textSize="20dip"
+        binding:text="Address" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:src="@drawable/uploadicon"
+        binding:visibility="UPLOADED" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:src="@drawable/uploadfail"
+        binding:visibility="UN_UPLOADED" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="170dp" >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/yijian_icon"
+            binding:visibility="INSPECTED" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/weijian_icon"
+            binding:visibility="UN_INSPECTED" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/jujian_icon"
+            binding:visibility="DENIED" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/wuren_icon"
+            binding:visibility="NOANSWER" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/weixiu_icon"
+            binding:visibility="REPAIR" />
+    </LinearLayout>
+
+</LinearLayout>

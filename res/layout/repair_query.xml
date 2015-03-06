@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://www.gueei.com/android-binding/"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/weixiu_bgimage"
+    android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="70dp"
+                            android:layout_marginTop="6dp" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="0dp"
+        android:text="维修查询"
+        android:textColor="@color/white"
+        android:textSize="@dimen/NoticeTopTitleSize" />
+
+                             <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="50dp"
+                                android:text="IC卡号"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/NoticeTopTitleSize" />
+
+                            <EditText
+                                android:id="@+id/editText1"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:ems="100"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                binding:text="txtCardNo" >
+
+                                <requestFocus />
+                            </EditText>
+
+                            <TextView
+                                android:id="@+id/textView15"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="用户名"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/NoticeTopTitleSize" />
+
+                            <EditText
+                                android:id="@+id/editText2"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:ems="10"
+                                android:inputType="text"
+                                android:maxLength="10"
+                                binding:text="txtUserName" />
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="地址"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/NoticeTopTitleSize" />
+                            
+                            <EditText
+                                android:id="@+id/editText3"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:ems="10"
+                                android:inputType="text"
+                                android:maxLength="50"
+                                binding:text="txtAddress" />
+                            
+                            <Button
+                                android:id="@+id/button4"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/search_btnxml"
+                                binding:onClick="SearchByExample" />
+    
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="889dp"
+            android:layout_height="408dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="20dp" >
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="标题"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="500dp"
+                    android:text="状态"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/lvUpload"
+                android:layout_width="827dp"
+                android:layout_height="346dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="23dp"
+                android:divider="#d0cece"
+                android:dividerHeight="1dp"
+                binding:itemSource="repairList"
+                binding:itemTemplate="@layout/repair_query_entry" >
+
+            </ListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imageViewAll"
+                android:layout_width="135dp"
+                android:layout_height="67dp"
+                binding:onClick="AllClicked"
+                binding:source="allImgId" />
+
+            <ImageView
+                android:id="@+id/imageViewYi"
+                android:layout_width="135dp"
+                android:layout_height="67dp"
+                binding:onClick="YiImgClicked"
+                binding:source="yiImgId" />
+
+            <ImageView
+                android:id="@+id/imageViewWei"
+                android:layout_width="135dp"
+                android:layout_height="67dp"
+                binding:onClick="WeiImgClicked"
+                binding:source="weiImgId" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

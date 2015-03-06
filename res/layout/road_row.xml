@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:binding="http://www.gueei.com/android-binding/"
+        android:layout_width="fill_parent"
+        android:layout_height="35dip" 
+        binding:onClick="ListUNIT_NAME"
+        binding:background="IF(Chosen, block_selected_background, block_background)">
+  
+      
+   	<TextView
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:layout_marginLeft="@dimen/Maingap"
+   	    android:textColor="@color/black"
+   	    android:textSize="30dip"
+   	    binding:text="ROAD" />
+
+</LinearLayout>

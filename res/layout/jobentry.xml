@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://www.gueei.com/android-binding/"
+    android:layout_width="fill_parent"
+    android:layout_height="45dp"
+    binding:onClick="ShowContact" >
+      
+   	<TextView
+   	    android:layout_width="400dp"
+   	    android:layout_height="wrap_content"
+   	    android:textSize="30dip"
+   	    binding:text="Name" />
+
+   	<TextView
+   	    android:layout_width="200dp"
+   	    android:layout_height="wrap_content"
+   	    android:textSize="30dip"
+   	    binding:text="State" />
+
+   	<Button
+   	    android:id="@+id/button1"
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:layout_gravity="center_vertical"
+   	    android:layout_marginLeft="70dp"
+   	    android:background="@drawable/downicon_btnxml"
+   	    binding:onClick="JobDown" />
+
+</LinearLayout>

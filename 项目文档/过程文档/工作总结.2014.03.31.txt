@@ -1,0 +1,33 @@
+已完成工作：
+
+1. 系统设置(SetupModel) - 完成了安检计划及安检单的初级建立，安检单字段有待完善。
+2. 计划下载(JobDownModel) - 完成了计划单列表及下载功能，安检单字段有待完善。
+3. 单元选择(BigAddressModel) - 完成了街道选择功能，进一步选择有待完善。
+
+工作模式：
+
+1. 整个系统根据场景分成多个Activity，各Activity的功能参见《android开发.doc》。每个Activity
+对应一个view，及一个主model。所有activity在com.aofeng.safecheck.activity包下，所有主model
+在com.aofeng.safecheck.modelview包下，所有view在res/layout下。
+2. 主model中列表所对应的行model在com.aofeng.safecheck.model包下，行的view在res/layout下，
+名称以entry结束。
+
+服务访问：
+
+1. 目前先访问公司oa的服务，相关hibernate配置在公司oa上进行。
+2. 网络服务访问需在单独线程中进行。
+
+计划任务：
+
+1. 服务中每个计划任务对应一批安检单。
+2. 平板上建立计划表以及安检表，无一对多关系。每次下载时，列出未下载及已下载的计划，选中某个计划下载时，
+将计划对应的安检单全部下载到平板中，旧的安检单全部删除。
+
+后续工作：
+
+1. 继续完成平板上安检单选择及填写功能。
+2. 完成安检单填写后的上传功能。
+3. 将服务器部署在秦华天然气。
+4. 完成服务器端安检任务生成功能。
+5. 完成客户资料在安检服务器上的备份。
+6. 完成安检时查询客户资料的功能。

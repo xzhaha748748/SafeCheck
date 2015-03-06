@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            		xmlns:binding="http://www.gueei.com/android-binding/"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+	                 android:focusable="true"  
+	   				 android:focusableInTouchMode="true"
+            		android:background="@drawable/ajjh_louceng_bgimage" >
+
+                    <LinearLayout
+                        android:layout_width="889dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="70dp"
+                            android:layout_marginTop="6dp" >
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="安检计划"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/NoticeTopTitleSize" />
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="320dp"
+                                android:text="楼层筛选从"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/NoticeTopTitleSize" />
+
+                            <EditText
+                                android:id="@+id/editText1"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:ems="10"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                binding:text="txtFloorFrom" >
+
+                                <requestFocus />
+                            </EditText>
+
+                            <TextView
+                                android:id="@+id/textView15"
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:text="到"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/NoticeTopTitleSize" />
+
+                            <EditText
+                                android:id="@+id/editText2"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:ems="10"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                binding:text="txtFloorTo" />
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="55dp"
+                                android:layout_height="wrap_content"
+                                android:text="层"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/NoticeTopTitleSize" />
+
+                            <Button
+                                android:id="@+id/button4"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/search_btnxml"
+                                binding:onClick="SearchByState" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/BigAdressgap"
+                            android:layout_marginTop="20dp" >
+
+                            <TextView
+                                android:id="@+id/textView1"
+                                android:layout_width="110dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="35dp"
+                                android:text="单元"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textSize" />
+
+                            <TextView
+                                android:id="@+id/textView6"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="楼层"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textSize" />
+
+                            <TextView
+                                android:id="@+id/textView9"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="房号"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textSize" />
+
+                            <TextView
+                                android:id="@+id/textView16"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="上传是否成功"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textSize" />
+
+                            <TextView
+                                android:id="@+id/textView17"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="安检状态"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textSize" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="388dp"
+                            android:orientation="vertical" >
+
+                            <ListView
+                                android:id="@+id/lvItems"
+                                android:layout_width="837dp"
+                                android:layout_height="349dp"
+                                android:layout_marginLeft="30px"
+                                android:layout_marginRight="50dp"
+                                android:layout_marginTop="30dp"
+                                android:layout_marginBottom="32dp"
+                                android:layout_weight="0.55"
+                                android:divider="#d0cece"
+                                android:dividerHeight="1dp"
+                                binding:itemSource="floorRoomList"
+                                binding:itemTemplate="@layout/floor_room_entry" >
+                            </ListView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/BigAdressgap"
+                            android:layout_marginTop="10dp" >
+
+                            <TextView
+                                android:id="@+id/lblInspectedNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="全部："
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/NoticeTopTitleSize" />
+
+                            <TextView
+                                android:id="@+id/txtTotalNum"
+                                android:layout_width="80px"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/NoticeTopTitleSize"
+                                android:textColor="@color/black"
+                                binding:text="txtTotalNum" />
+
+                            <TextView
+                                android:id="@+id/lblInspectedNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/NoticeTopTitleSize"
+                                android:textColor="@color/black"
+                                android:text="已安检：" />
+
+                            <TextView
+                                android:id="@+id/txtInspectedNum"
+                                android:layout_width="80px"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/NoticeTopTitleSize"
+                                android:textColor="@color/black"
+                                binding:text="txtInspectedNum" />
+
+                            <TextView
+                                android:id="@+id/textView6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/NoticeTopTitleSize"
+                                android:textColor="@color/black"
+                                android:text="拒访：" />
+
+                            <TextView
+                                android:id="@+id/txtDeniedNum"
+                                android:layout_width="80px"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/NoticeTopTitleSize"
+                                android:textColor="@color/black"
+                                binding:text="txtDeniedNum" />
+
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/NoticeTopTitleSize"
+                                android:textColor="@color/black"
+                                android:text="无人：" />
+
+                            <TextView
+                                android:id="@+id/txtNoAnswerNum"
+                                android:layout_width="80px"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/NoticeTopTitleSize"
+                                android:textColor="@color/black"
+                                binding:text="txtNoAnswerNum" />
+
+                            <TextView
+                                android:id="@+id/textView11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/NoticeTopTitleSize"
+                                android:textColor="@color/black"
+                                android:text="维修：" />
+
+                            <TextView
+                                android:id="@+id/txtNeedFixNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/NoticeTopTitleSize"
+                                android:textColor="@color/black"
+                                binding:text="txtNeedFixNum" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="50dp"
+                        android:orientation="vertical" >
+
+
+			            <ImageView
+			                android:id="@+id/imageViewAll"
+			                android:layout_width="135dp"
+			                android:layout_height="67dp"
+			                binding:onClick="AllClicked"
+			                binding:source="allImgId" />
+			
+			            <ImageView
+			                android:id="@+id/imageViewYi"
+			                android:layout_width="135dp"
+			                android:layout_height="67dp"
+			                binding:onClick="YiImgClicked"
+			                binding:source="yiImgId" />
+			            
+			            <ImageView
+			                android:id="@+id/imageViewWei"
+			                android:layout_width="135dp"
+			                android:layout_height="67dp"
+			                binding:onClick="WeiImgClicked"
+			                binding:source="weiImgId" />
+			
+			
+			            <ImageView
+			                android:id="@+id/imageViewJu"
+			                android:layout_width="135dp"
+			                android:layout_height="67dp"
+			                binding:onClick="JuImgClicked"
+			                binding:source="juImgId" />
+			
+			            <ImageView
+			                android:id="@+id/imageViewWu"
+			                android:layout_width="135dp"
+			                android:layout_height="67dp"
+			                binding:onClick="WuImgClicked"
+			                binding:source="wuImgId" />
+			            <ImageView
+			                android:id="@+id/imageViewWu"
+			                android:layout_width="135dp"
+			                android:layout_height="67dp"
+			                binding:onClick="WeixiuImgClicked"
+			                binding:source="weixiuImgId" />
+
+                    </LinearLayout>
+
+                </LinearLayout>

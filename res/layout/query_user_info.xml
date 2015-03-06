@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://www.gueei.com/android-binding/"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" 
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:layout_marginTop="30dp"
+    	android:layout_marginLeft="35dp"
+    	android:orientation="vertical" >
+    	
+    	<LinearLayout 
+       		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:orientation="horizontal" >
+
+    		<LinearLayout
+        		android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:orientation="vertical" >
+    	
+    <!-- 用户姓名、电话-->
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal" >
+    	
+    	<TextView
+    	    android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="6dp"
+            android:text="用户姓名："
+            android:textColor="@color/black"
+            android:textSize="20sp" >
+    	</TextView>
+    	
+    	<EditText
+    	    android:id="@+id/txtUserName"
+    	    android:layout_width="322dp"
+    	    android:layout_height="45dp"
+    	    android:layout_gravity="fill"
+    	    android:singleLine="true"
+    	    binding:text="txtUserName"
+    	    android:textSize="20sp" />
+    	
+    	<TextView
+    	    android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="6dp"
+            android:text="电        话："
+            android:textColor="@color/black"
+            android:textSize="20sp" >
+    	</TextView>
+    	
+    	<EditText
+    	    android:id="@+id/txtTelephone"
+    	    android:layout_width="322dp"
+    	    android:layout_height="45dp"
+    	    android:layout_gravity="fill"
+    	    android:singleLine="true"
+    	    binding:text="txtTelephone"
+    	    android:textSize="20sp" />
+    	
+    </LinearLayout>
+    
+    <!-- 用户地址  -->
+
+    <LinearLayout 
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal" >
+    	
+        <TextView
+    	    android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="6dp"
+            android:text="用户地址："
+            android:textColor="@color/black"
+            android:textSize="20sp" >
+    	</TextView>
+    	
+    	<EditText
+    	    android:id="@+id/txtAddress"
+    	    android:layout_width="750dp"
+    	    android:layout_height="45dp"
+    	    android:layout_gravity="fill"
+    	    android:singleLine="true"
+    	    binding:text="txtAddress"
+    	    android:textSize="20sp" />
+    	
+    	</LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="查找"
+        android:textSize="15sp"
+        binding:onClick="SearchUserInfo" />
+
+    </LinearLayout>
+    <!-- 地址列表  -->
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal" >
+    	
+        <TextView
+    	    android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="6dp"
+            android:text="查询结果："
+            android:textColor="@color/black"
+            android:textSize="20sp" >
+    	</TextView>
+    	
+    	<ListView
+    	    android:id="@+id/ListUserInfo"
+    	    android:layout_width="846dp"
+    	    android:layout_height="340dp"
+    	    android:layout_marginTop="10dp"
+    	    android:layout_marginBottom="@dimen/TitleTop"
+    	    android:layout_weight="0.71"
+    	    android:divider="#d0cece"
+    	    android:dividerHeight="1dp"
+            binding:itemSource="userList"
+    	    binding:itemTemplate="@layout/user_info_entry" >
+
+        </ListView>
+        
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

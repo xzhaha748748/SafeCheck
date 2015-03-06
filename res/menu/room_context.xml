@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:binding="http://www.gueei.com/android-binding/">
+    <item android:id="@+id/m1"  android:title="添加" binding:onClick="CoinNew" />
+     <item android:id="@+id/m3"  android:title="删除" binding:enabled="NOT(DELETED)" binding:onClick="Remove"/>
+    <item android:id="@+id/m4"  android:title="取消删除"  binding:enabled="DELETED" binding:onClick="CancelRemove"/>
+    <item android:id="@+id/m5"  android:title="入户安检"  binding:enabled="NOT(DELETED)" binding:onClick="InspectApartment"/>
+</menu>

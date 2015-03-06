@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://www.gueei.com/android-binding/"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/yhgl_bgimage"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="@dimen/BigAddresstop"
+        android:text=" 定制计划"
+        android:textColor="@color/white"
+        android:textSize="@dimen/NoticeTopTitleSize" />
+
+    <LinearLayout
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="35dp" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="149dp"
+            android:layout_height="wrap_content"
+            android:text="街道"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="149dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="110dp"
+            android:text="小区"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="楼号"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="单元"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="楼层"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="149dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="房号"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="@dimen/TitleTop"
+        android:layout_weight="0.68" >
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="160dp"
+            android:layout_height="346dp"
+            android:layout_marginBottom="@dimen/TitleTop"
+            android:layout_weight="0.12"
+            android:divider="@color/white"
+            android:dividerHeight="4dp"
+            binding:clickedId="blockItemIdx"
+            binding:itemSource="ROADList"
+            binding:itemTemplate="@layout/road_row" >
+        </ListView>
+
+        <ListView
+            android:id="@+id/listView2"
+            android:layout_width="152dp"
+            android:layout_height="346dp"
+            android:layout_marginLeft="20dp"
+            android:divider="@color/white"
+            android:dividerHeight="4dp"
+            binding:clickedId="unitItemIdx"
+            binding:itemSource="UNIT_NAMEList"
+            binding:itemTemplate="@layout/unitname_row" >
+
+        </ListView>
+
+        <ListView
+            android:id="@+id/listView3"
+            android:layout_width="120dp"
+            android:layout_height="346dp"
+            android:layout_marginLeft="40dp"
+            android:layout_weight="0.17"
+            android:divider="@color/white"
+            android:dividerHeight="4dp"
+            binding:clickedId="domentryItemIdx"
+            binding:itemSource="CUS_DOMList"
+            binding:itemTemplate="@layout/dom_row" >
+
+        </ListView>
+
+        <ListView
+            android:id="@+id/listView4"
+            android:layout_width="120dp"
+            android:layout_height="342dp"
+            android:layout_marginLeft="@dimen/Loginhight"
+            android:divider="@color/white"
+            android:dividerHeight="4dp"
+            binding:clickedId="dyentryItemIdx"
+            binding:itemSource="CUS_DYList"
+            binding:itemTemplate="@layout/dy_row" >
+        </ListView>
+
+        <ListView
+            android:id="@+id/listView5"
+            android:layout_width="120dp"
+            android:layout_height="342dp"
+            android:layout_marginLeft="30dp"
+            android:divider="@color/white"
+            android:dividerHeight="4dp"
+            binding:clickedId="floorItemIdx"
+            binding:itemSource="FloorList"
+            binding:itemTemplate="@layout/floor_row" >
+        </ListView>
+
+        <ListView
+            android:id="@+id/listView6"
+            android:layout_width="120dp"
+            android:layout_height="342dp"
+            android:layout_marginLeft="20dp"
+            android:divider="@color/white"
+            android:dividerHeight="4dp"
+            binding:clickedId="roomItemIdx"
+            binding:itemSource="RoomList"
+            binding:itemTemplate="@layout/room_row" >
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tableRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="50dp" >
+
+        <Button
+            android:id="@+id/btnBuildingPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/jia_btnxml"
+            binding:onClick="AddBuilding" />
+
+        <Button
+            android:id="@+id/btnBuildingMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/jian_btnxml"
+            binding:onClick="DelBuilding" />
+
+        <Button
+            android:id="@+id/btnDYPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/jia_btnxml"
+            binding:onClick="AddDY" />
+
+        <Button
+            android:id="@+id/btnDYMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/jian_btnxml"
+            binding:onClick="DelDY" />
+
+        <Button
+            android:id="@+id/btnFloorPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/jia_btnxml"
+            binding:onClick="AddFloor" />
+
+        <Button
+            android:id="@+id/btnFloorMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/jian_btnxml"
+            binding:onClick="DelFloor" />
+
+        <Button
+            android:id="@+id/btnRoomPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/jia_btnxml"
+            binding:onClick="AddRoom" />
+
+        <Button
+            android:id="@+id/btnRoomMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/jian_btnxml"
+            binding:onClick="DelRoom" />
+    </LinearLayout>
+
+</LinearLayout>

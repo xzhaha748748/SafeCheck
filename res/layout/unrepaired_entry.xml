@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://www.gueei.com/android-binding/"
+    android:layout_width="fill_parent"
+    android:layout_height="50px"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    binding:onClick="GoMending" >
+
+    <TextView
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        binding:text="ROAD" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:textSize="20sp"
+        binding:text="UNIT_NAME" />
+
+    <TextView
+        android:layout_width="18dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="90dp"
+        android:textSize="20sp"
+        binding:text="CUS_DOM" />
+
+    <TextView
+        android:layout_width="18dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:textSize="20sp"
+        binding:text="CUS_DY" />
+
+    <TextView
+        android:layout_width="18dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:textSize="20sp"
+        binding:text="CUS_FLOOR" />
+
+    <TextView
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:textSize="20sp"
+        binding:text="CUS_ROOM" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="120dp"
+        android:src="@drawable/weixiu_icon" />
+
+</LinearLayout>

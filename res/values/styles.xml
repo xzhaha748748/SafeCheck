@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <resources xmlns:android="http://schemas.android.com/apk/res/android">
+        <style name="spinner">
+            <item name="android:background">@drawable/spinnerxml</item>
+            <item name="android:textColor">@color/black</item>
+            <item name="android:gravity">center_vertical</item>
+            <item name="android:layout_height">40dp</item>
+        </style>
+    </resources>

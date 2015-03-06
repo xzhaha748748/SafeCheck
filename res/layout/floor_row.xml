@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:binding="http://www.gueei.com/android-binding/"
+        android:layout_width="fill_parent"
+        android:layout_height="35dip" 
+        binding:onClick="ListCUS_ROOM"
+        android:background="@drawable/ajjh_titlebg4"
+        binding:background="IF(Chosen, floor_selected_background, floor_background)">
+      
+     <ImageView
+       android:layout_width="50dp"
+       android:layout_height="wrap_content"
+       android:src="@drawable/jia_btn"
+       binding:visibility="Added"
+	/> 
+    	<TextView
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:layout_marginLeft="6dp"
+   	    android:textColor="@color/black"
+   	    android:textSize="30dip"
+   	    binding:text="CUS_FLOOR" />
+
+</LinearLayout>

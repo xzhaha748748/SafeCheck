@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <resources>
+        <color name="Mainground">#f7f7f9</color>
+        <color name="white">#ffffff</color>
+        <color name="black">#000000</color>
+        <color name="Logintext">#30407c</color>
+        <color name="blue">#98a6d7</color>
+        <color name="NOCOLOR">#00000000</color>
+    </resources>

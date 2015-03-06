@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical|center" >
+  
+    <TextView
+        android:id="@+id/setting_tab_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="0.02"
+        android:text="常规设置"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp" />
+  
+</LinearLayout>

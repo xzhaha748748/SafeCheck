@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:binding="http://www.gueei.com/android-binding/"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/mainmenubg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/Maintop" >
+
+            <Button
+                android:id="@+id/btnUnrepared"
+                android:layout_width="207dp"
+                android:layout_height="142dp"
+                android:layout_gravity="top|right"
+                android:layout_marginLeft="261dp"
+                android:background="@drawable/wx_unxml"
+                android:gravity="right|top"
+                android:textColor="@color/white"
+                android:textSize="@dimen/NoticeTopTitleSize"
+                binding:onClick="RepairView"
+                binding:text="CONCAT( &apos;未维修[&apos;, count, &apos;]&apos;)" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="292dp"
+                android:layout_height="142dp"
+                android:layout_marginLeft="@dimen/Maingap"
+                android:background="@drawable/wx_scunxml"
+                android:gravity="right|top"
+                android:text="上传"
+                android:textColor="@color/white"
+                android:textSize="@dimen/NoticeTopTitleSize"
+                binding:onClick="RepairUpload" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="142dp"
+            android:layout_marginTop="@dimen/Maingap" >
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="169dp"
+                android:layout_height="142dp"
+                android:layout_marginLeft="261dp"
+                android:background="@drawable/wx_cxunxml"
+                android:gravity="right|top"
+                android:text="维修查询"
+                android:textColor="@color/white"
+                android:textSize="@dimen/NoticeTopTitleSize"
+                binding:onClick="RepairQuery" />
+
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="119dp"
+                android:layout_height="142dp"
+                android:layout_marginLeft="@dimen/Maingap"
+                android:background="@drawable/wx_szunxml"
+                android:gravity="top|right|end"
+                android:text="设置"
+                android:textColor="@color/white"
+                android:textSize="@dimen/NoticeTopTitleSize"
+                binding:onClick="Reset" />
+            
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="208dp"
+                android:layout_height="142dp"
+                android:layout_marginLeft="@dimen/Maingap"
+                android:background="@drawable/wx_userunxml"
+                android:gravity="right|top"
+                android:text="用户管理"
+                android:textColor="@color/white"
+                android:textSize="@dimen/NoticeTopTitleSize" 
+                binding:onClick="ModifyPassword" />
+
+        </LinearLayout>
+    </LinearLayout>

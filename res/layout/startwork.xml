@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:binding="http://www.gueei.com/android-binding/"
+    xmlns:android1="http://schemas.android.com/apk/res/android"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android2="http://schemas.android.com/apk/res/android"
+    android1:layout_width="fill_parent"
+    android1:layout_height="fill_parent"
+    android:columnCount="@integer/two" >
+
+    <TabHost
+        android2:id="@android:id/tabhost"
+        android2:layout_width="match_parent"
+        android2:layout_height="match_parent"
+        android2:layout_weight="1" >
+
+        <LinearLayout
+            android2:layout_width="match_parent"
+            android2:layout_height="match_parent"
+            android2:orientation="horizontal" >
+
+            <com.aofeng.utils.VerticalTabWidget
+                android2:id="@android:id/tabs"
+                android2:layout_width="wrap_content"
+                android2:layout_height="fill_parent" >
+            </com.aofeng.utils.VerticalTabWidget>
+
+            <FrameLayout
+                android2:id="@android:id/tabcontent"
+                android2:layout_width="match_parent"
+                android2:layout_height="match_parent" >
+
+                <LinearLayout
+                    android2:id="@+id/tab1"
+                    android2:layout_width="match_parent"
+                    android2:layout_height="match_parent" >
+
+                    <Button
+                        android2:id="@+id/button1"
+                        android2:layout_width="wrap_content"
+                        android2:layout_height="wrap_content"
+                        android2:text="Button" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android2:id="@+id/tab2"
+                    android2:layout_width="match_parent"
+                    android2:layout_height="match_parent" >
+
+                    <AnalogClock
+                        android2:id="@+id/analogClock1"
+                        android2:layout_width="wrap_content"
+                        android2:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android2:id="@+id/tab3"
+                    android2:layout_width="match_parent"
+                    android2:layout_height="match_parent" >
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>
