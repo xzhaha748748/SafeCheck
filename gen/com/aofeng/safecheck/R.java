@@ -290,8 +290,8 @@ containing a value of this type.
         public static final int button2=0x7f04001e;
         public static final int button3=0x7f040023;
         public static final int button4=0x7f040035;
-        public static final int button5=0x7f0400f4;
-        public static final int button7=0x7f0400f3;
+        public static final int button5=0x7f0400f3;
+        public static final int button7=0x7f0400f4;
         public static final int button8=0x7f0400f5;
         public static final int buttonParam=0x7f04011d;
         public static final int button_capture=0x7f040120;

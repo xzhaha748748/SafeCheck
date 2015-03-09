@@ -9,7 +9,7 @@
             		android:background="@drawable/ajjh_louceng_bgimage" >
 
                     <LinearLayout
-                        android:layout_width="889dp"
+                        android:layout_width="835dp"
                         android:layout_height="wrap_content"
                         android:orientation="vertical" >
 
@@ -31,7 +31,7 @@
                                 android:id="@+id/textView2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="320dp"
+                                android:layout_marginLeft="300dp"
                                 android:text="楼层筛选从"
                                 android:textColor="@color/black"
                                 android:textSize="@dimen/NoticeTopTitleSize" />
@@ -94,7 +94,7 @@
                                 android:id="@+id/textView1"
                                 android:layout_width="110dp"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="35dp"
+                                android:layout_marginLeft="50dp"
                                 android:text="单元"
                                 android:textColor="@color/white"
                                 android:textSize="@dimen/textSize" />
@@ -104,6 +104,7 @@
                                 android:layout_width="120dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
+                                android:layout_marginLeft="15dp"
                                 android:text="楼层"
                                 android:textColor="@color/white"
                                 android:textSize="@dimen/textSize" />
@@ -130,9 +131,11 @@
                                 android:id="@+id/textView17"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
                                 android:text="安检状态"
                                 android:textColor="@color/white"
                                 android:textSize="@dimen/textSize" />
+
                         </LinearLayout>
 
                         <LinearLayout
@@ -142,17 +145,18 @@
 
                             <ListView
                                 android:id="@+id/lvItems"
-                                android:layout_width="837dp"
+                                android:layout_width="fill_parent"
                                 android:layout_height="349dp"
-                                android:layout_marginLeft="30px"
-                                android:layout_marginRight="50dp"
-                                android:layout_marginTop="30dp"
-                                android:layout_marginBottom="32dp"
+                                android:layout_marginBottom="16dp"
+                                android:layout_marginLeft="24dp"
+                                android:layout_marginRight="22dp"
+                                android:layout_marginTop="25dp"
                                 android:layout_weight="0.55"
                                 android:divider="#d0cece"
                                 android:dividerHeight="1dp"
                                 binding:itemSource="floorRoomList"
                                 binding:itemTemplate="@layout/floor_room_entry" >
+
                             </ListView>
                         </LinearLayout>
 

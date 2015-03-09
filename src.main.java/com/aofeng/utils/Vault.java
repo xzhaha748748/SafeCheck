@@ -98,9 +98,9 @@ public class Vault {
 	public static String AUTH_URL = "http://192.168.1.222:82/rs/user/";
 //	public static String TUNNEL_URL = "http://192.168.1.222:8080/rs/tunnel/http%3A%7C%7C192.168.1.222%3A8080%7Crs%7Cdb%7C";
 	public static String TUNNEL_URL = "http://192.168.1.222:8082/rs/db/";
-	public static  String downloadURL = "http://192.168.1.222:8082/safecheck.apk";
+	public static  String downloadURL = "http://192.168.1.222:8082/SafeCheck.apk";
 	public static  String checkVersionURL = "http://192.168.1.222:8082/rs/db/one/from%20t_singlevalue%20where%20name='safecheck°æ±¾ºÅ'";
 	
 	public static  String apkName ="download.apk";
-	public static String appID="casafecheck";
+	public static String appID="rcghsafecheck";
 }

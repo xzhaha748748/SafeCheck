@@ -96,7 +96,7 @@ public class ShootSurfaceView extends SurfaceView implements
 			
 			@Override
 			public void onAutoFocus(boolean success, Camera camera) {
-				if(success)
+				if(!success)
 					camera.takePicture(null, null, jpegCallback);
 				}
 		});

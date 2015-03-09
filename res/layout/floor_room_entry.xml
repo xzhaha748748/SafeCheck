@@ -29,7 +29,7 @@
     <TextView
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="2dp"
         android:textSize="30dip"
         binding:text="CUS_DY" />
 

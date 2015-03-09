@@ -28,57 +28,65 @@
 
             <ImageView
                 android:id="@+id/imageViewBasic"
-                android:layout_width="179dp"
-                android:layout_height="wrap_content"
+                android:layout_width="167dp"
+                android:layout_height="60dp"
+                android:layout_gravity="fill_horizontal"
                 binding:onClick="BasicImgClicked"
                 binding:source="basicImgId" />
 
             <ImageView
                 android:id="@+id/imageViewMeter"
-                android:layout_width="179dp"
-                android:layout_height="wrap_content"
+                android:layout_width="167dp"
+                android:layout_height="60dp"
+                android:layout_gravity="fill_horizontal"
                 binding:onClick="MeterImgClicked"
                 binding:source="meterImgId" />
 
             <ImageView
                 android:id="@+id/imageViewPlum"
-                android:layout_width="179dp"
-                android:layout_height="wrap_content"
+                android:layout_width="167dp"
+                android:layout_height="60dp"
+                android:layout_gravity="fill_horizontal"
                 binding:onClick="PlumImgClicked"
                 binding:source="plumImgId" />
 
             <ImageView
                 android:id="@+id/imageViewCooker"
-                android:layout_width="179dp"
-                android:layout_height="wrap_content"
+                android:layout_width="167dp"
+                android:layout_height="60dp"
+                android:layout_gravity="fill_horizontal"
                 binding:onClick="CookerImgClicked"
                 binding:source="cookerImgId" />
 
             <ImageView
                 android:id="@+id/imageViewFurnace"
-                android:layout_width="179dp"
-                android:layout_height="wrap_content"
+                android:layout_width="167dp"
+                android:layout_height="60dp"
+                android:layout_gravity="fill_horizontal"
                 binding:onClick="FurnaceImgClicked"
                 binding:source="furnaceImgId" />
 
             <ImageView
                 android:id="@+id/imageViewPrecaution"
-                android:layout_width="179dp"
-                android:layout_height="wrap_content"
+                android:layout_width="167dp"
+                android:layout_height="60dp"
+                android:layout_gravity="fill_horizontal"
                 binding:onClick="PrecautionImgClicked"
                 binding:source="precautionImgId" />
 
             <ImageView
                 android:id="@+id/imageViewSuggestion"
-                android:layout_width="179dp"
-                android:layout_height="wrap_content"
+                android:layout_width="167dp"
+                android:layout_height="60dp"
+                android:layout_gravity="fill_horizontal"
                 binding:onClick="SuggestionImgClicked"
                 binding:source="suggestionImgId" />
 
             <ImageView
                 android:id="@+id/imageViewFeedback"
-                android:layout_width="179dp"
-                android:layout_height="wrap_content"
+                android:layout_width="167dp"
+                android:layout_height="60dp"
+                android:layout_gravity="fill_horizontal"
                 binding:onClick="FeedbackImgClicked"
                 binding:source="feedbackImgId" />
         </LinearLayout>
@@ -775,7 +783,6 @@
                         android:layout_width="200dp"
                         android:layout_height="35dp"
                         android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="40dp"
                         android:background="@color/white"
                         binding:itemSource="f_baojingqi"
                         binding:itemTemplate="@layout/simple_spinner_dropdown_item"
@@ -1186,7 +1193,7 @@
 
                     <EditText
                         android:id="@+id/f_qibiao"
-                        android:layout_width="200dp"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
                         binding:text="f_qibiao" />
@@ -2753,8 +2760,8 @@
 
                         <ImageView
                             android:id="@+id/image1"
-                            android:layout_width="150px"
-                            android:layout_height="105px"
+                            android:layout_width="140dp"
+                            android:layout_height="100dp"
                             android:background="@drawable/nopic" />
 
                         <LinearLayout
@@ -2768,15 +2775,16 @@
                                 android:layout_height="wrap_content"
                                 android:text="拍照"
                                 android:textColor="@color/black"
-                                android:textSize="20sp" />
+                                android:textSize="18sp" />
 
                             <Button
                                 android:id="@+id/clear1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:gravity="right"
                                 android:text="清除"
                                 android:textColor="@color/black"
-                                android:textSize="20sp" />
+                                android:textSize="18sp" />
                         </LinearLayout>
                     </LinearLayout>
 
@@ -2788,8 +2796,8 @@
 
                         <ImageView
                             android:id="@+id/image2"
-                            android:layout_width="150px"
-                            android:layout_height="105px"
+                            android:layout_width="140dp"
+                            android:layout_height="100dp"
                             android:background="@drawable/nopic" />
 
                         <LinearLayout
@@ -2803,15 +2811,16 @@
                                 android:layout_height="wrap_content"
                                 android:text="拍照"
                                 android:textColor="@color/black"
-                                android:textSize="20sp" />
+                                android:textSize="18sp" />
 
                             <Button
                                 android:id="@+id/clear2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:gravity="right"
                                 android:text="清除"
                                 android:textColor="@color/black"
-                                android:textSize="20sp" />
+                                android:textSize="18sp" />
                         </LinearLayout>
                     </LinearLayout>
 
@@ -2823,8 +2832,8 @@
 
                         <ImageView
                             android:id="@+id/image3"
-                            android:layout_width="150px"
-                            android:layout_height="105px"
+                            android:layout_width="140dp"
+                            android:layout_height="100dp"
                             android:background="@drawable/nopic" />
 
                         <LinearLayout
@@ -2838,15 +2847,16 @@
                                 android:layout_height="wrap_content"
                                 android:text="拍照"
                                 android:textColor="@color/black"
-                                android:textSize="20sp" />
+                                android:textSize="18sp" />
 
                             <Button
                                 android:id="@+id/clear3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:gravity="right"
                                 android:text="清除"
                                 android:textColor="@color/black"
-                                android:textSize="20sp" />
+                                android:textSize="18sp" />
                         </LinearLayout>
                     </LinearLayout>
 
@@ -2858,8 +2868,8 @@
 
                         <ImageView
                             android:id="@+id/image4"
-                            android:layout_width="150dp"
-                            android:layout_height="105dp"
+                            android:layout_width="140dp"
+                            android:layout_height="100dp"
                             android:background="@drawable/nopic" />
 
                         <LinearLayout
@@ -2873,15 +2883,16 @@
                                 android:layout_height="wrap_content"
                                 android:text="拍照"
                                 android:textColor="@color/black"
-                                android:textSize="20sp" />
+                                android:textSize="18sp" />
 
                             <Button
                                 android:id="@+id/clear4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                				android:gravity="right"
                                 android:text="清除"
                                 android:textColor="@color/black"
-                                android:textSize="20sp" />
+                                android:textSize="18sp" />
                         </LinearLayout>
                     </LinearLayout>
 
@@ -2893,8 +2904,8 @@
 
                         <ImageView
                             android:id="@+id/image5"
-                            android:layout_width="150px"
-                            android:layout_height="105px"
+                            android:layout_width="140dp"
+                            android:layout_height="100dp"
                             android:background="@drawable/nopic" />
 
                         <LinearLayout
@@ -2908,15 +2919,16 @@
                                 android:layout_height="wrap_content"
                                 android:text="拍照"
                                 android:textColor="@color/black"
-                                android:textSize="20sp" />
+                                android:textSize="18sp" />
 
                             <Button
                                 android:id="@+id/clear5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:gravity="right"
                                 android:text="清除"
                                 android:textColor="@color/black"
-                                android:textSize="20sp" />
+                                android:textSize="18sp" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
@@ -2962,7 +2974,7 @@
 
                     <Spinner
                         android:id="@+id/RepairManList"
-                        android:layout_width="wrap_content"
+                        android:layout_width="200dp"
                         android:layout_height="35dp"
                         android:layout_gravity="center_vertical"
                         android:background="@color/blue"

@@ -21,15 +21,16 @@
         android:layout_height="match_parent" >
 
         <LinearLayout
-            android:layout_width="889dp"
-            android:layout_height="match_parent"
+            android:layout_width="835dp"
+            android:layout_height="fill_parent"
             android:orientation="vertical" >
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="80dp"
-                android:layout_marginTop="38dp" >
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="33dp" >
 
                 <TextView
                     android:id="@+id/textView2"
@@ -50,21 +51,23 @@
                     android:id="@+id/textView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="205dp"
+                    android:layout_marginLeft="195dp"
                     android:text="状态"
                     android:textColor="@color/white" />
             </LinearLayout>
 
             <ListView
                 android:id="@+id/listView1"
-                android:layout_width="800dp"
-                android:layout_height="345dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="23dp"
+                android:layout_width="fill_parent"
+                android:layout_height="347dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="23dp"
+                android:layout_marginTop="25dp"
                 android:divider="#d0cece"
                 android:dividerHeight="1dp"
                 binding:itemSource="plainList"
                 binding:itemTemplate="@layout/security_entry" >
+
             </ListView>
         </LinearLayout>
 

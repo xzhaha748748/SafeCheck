@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:binding="http://www.gueei.com/android-binding/"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,8 +16,9 @@
             android:textSize="@dimen/NoticeTopTitleSize" />
         
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/Maintop" >
 
             <Button
@@ -27,7 +26,6 @@
                 android:layout_width="128dp"
                 android:layout_height="142dp"
                 android:layout_gravity="top|right"
-                android:layout_marginLeft="@dimen/Mainleft"
                 android:background="@drawable/xiazaibtnxml"
                 android:gravity="right|top"
                 android:text="下载"
@@ -58,31 +56,18 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/NoticeTopTitleSize"
                 binding:onClick="Setup" />
-
-            <Button
-                android:id="@+id/button7"
-                android:layout_width="187dp"
-                android:layout_height="142dp"
-                android:layout_marginLeft="@dimen/Maingap"
-                android:background="@drawable/gonggaobtnbtnxml"
-                android:gravity="right|top"
-                android:text="公告"
-                android:textColor="@color/white"
-                android:textSize="@dimen/NoticeTopTitleSize"
-                 binding:onClick="Notice"  />
-
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/Maingap" >
 
             <Button
                 android:id="@+id/button4"
-                android:layout_width="262dp"
+                android:layout_width="202dp"
                 android:layout_height="142dp"
-                android:layout_marginLeft="@dimen/Mainleft"
                 android:background="@drawable/anjianbtnxml"
                 android:gravity="right|top"
                 android:text="安检计划"
@@ -101,7 +86,17 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/NoticeTopTitleSize" 
                 binding:onClick="MySecurity"/>
-
+			<Button
+                android:id="@+id/button7"
+                android:layout_width="187dp"
+                android:layout_height="142dp"
+                android:layout_marginLeft="@dimen/Maingap"
+                android:background="@drawable/gonggaobtnbtnxml"
+                android:gravity="right|top"
+                android:text="公告"
+                android:textColor="@color/white"
+                android:textSize="@dimen/NoticeTopTitleSize"
+                 binding:onClick="Notice"  />
             <Button
                 android:id="@+id/button8"
                 android:layout_width="318dp"
@@ -111,8 +106,9 @@
                 android:gravity="right|top"
                 android:text="定制计划"
                 android:textColor="@color/white"
-                android:textSize="@dimen/NoticeTopTitleSize" 
-                binding:onClick="CustomPlan"/>
+                android:textSize="@dimen/NoticeTopTitleSize"
+                android:visibility="gone"
+                binding:onClick="CustomPlan" />
 
         </LinearLayout>
     </LinearLayout>

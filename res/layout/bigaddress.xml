@@ -60,18 +60,17 @@
 
     <LinearLayout
         android:id="@+id/tableRow2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/NoticeLeft"
-        android:layout_marginTop="@dimen/TitleTop"
-        android:layout_weight="0.68" >
+        android:layout_width="fill_parent"
+        android:layout_height="338dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="135dp"
+        android:layout_marginTop="25dp" >
 
         <ListView
             android:id="@+id/listView1"
-            android:layout_width="260dp"
+            android:layout_width="313dp"
             android:layout_height="346dp"
             android:layout_marginBottom="@dimen/TitleTop"
-            android:layout_weight="0.71"
             android:divider="@color/white"
             android:dividerHeight="4dp"
             binding:clickedId="blockItemIdx"
@@ -82,7 +81,7 @@
 
         <ListView
             android:id="@+id/listView2"
-            android:layout_width="180dp"
+            android:layout_width="228dp"
             android:layout_height="346dp"
             android:layout_marginLeft="@dimen/BigAdressgap"
             android:divider="@color/white"
@@ -95,7 +94,7 @@
 
         <ListView
             android:id="@+id/listView3"
-            android:layout_width="90dp"
+            android:layout_width="92dp"
             android:layout_height="346dp"
             android:layout_marginLeft="@dimen/BigAdressgap"
             android:divider="@color/white"
@@ -108,7 +107,7 @@
 
         <ListView
             android:id="@+id/listView4"
-            android:layout_width="90dp"
+            android:layout_width="92dp"
             android:layout_height="342dp"
             android:layout_marginLeft="@dimen/Loginhight"
             android:divider="@color/white"
@@ -125,8 +124,9 @@
         android:id="@+id/tableRow3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="50dp" >
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp" >
 
         <!-- 状态栏，用于显示一天已安检多少用户，多少未安检 -->
         <!-- 属于常驻标签，后面页面都要用到 -->
